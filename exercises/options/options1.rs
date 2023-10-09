@@ -13,7 +13,7 @@ fn maybe_icecream(time_of_day: u16) -> Option<u16> {
     // TODO: Complete the function body - remember to return an Option!
     match time_of_day {
         0..=10 => Some(5),
-        11..24 => Some(0),
+        11..=24 => Some(0),
         _ => None,
     }
 }
@@ -36,6 +36,6 @@ mod tests {
         // TODO: Fix this test. How do you get at the value contained in the
         // Option?
         let icecreams = maybe_icecream(12);
-        assert_eq!(icecreams, 5);
+        assert_eq!(icecreams, Some(0));
     }
 }
